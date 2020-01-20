@@ -1,0 +1,28 @@
+id: 40520
+name: bizinabox
+separate-vendor: true
+asset-domain: assets.bizinaboxtest.com
+environments:
+  staging:
+    memory: 1024
+    timeout: 28
+    cli-memory: 1024
+    cli-timeout: 600
+    runtime: docker
+    network: vapor-network-1672771386
+    build:
+      - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
+      - 'php artisan event:cache'
+      - 'npm install --save --legacy-peer-deps && npm run prod && rm -rf node_modules'
+    deploy:
+      - 'php artisan --version'
+      - 'php artisan migrate --force'
+    domain:
+      - bizinaboxtest.com
+      - accounts.bizinaboxtest.com
+      - template.bizinaboxtest.com
+      - '*.bizinaboxtest.com'
+      - '*.directsalesoptions.com'
+    #        database: BizinaboxTest // remove this in development because AWS RDS costs high
+    firewall:
+      rate-limit: 1000 # for dev only

@@ -1,0 +1,85 @@
+.system-palettes {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    position: relative;
+}
+
+.palette-item {
+    padding: 10px;
+    height: 120px;
+    border-radius: 2px;
+    border: solid 1px #00000012;
+    cursor: pointer;
+}
+
+.theme-color-labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.theme-color-labels > div {
+    flex: 1;
+    text-align: center;
+}
+
+.theme-colors {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.theme-colors .theme-color-item {
+    flex: 1;
+    /* height: 60px; */
+    border: solid 1px #00000012;
+}
+
+.theme-colors .theme-color-item > div{
+    height: 100%;
+    border: solid 2px transparent;
+}
+
+.theme-colors .theme-color-item > div.active{
+    border: solid 2px #0076df;
+}
+
+.colors-wrap {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    position: relative;
+}
+
+.colors-wrap.loading {
+    min-height: 150px;
+}
+
+.colors-wrap .color-item{
+    height: 35px;
+    border-radius: 2px;
+    border: solid 1px #80808078;
+    cursor: pointer;
+}
+
+.colors-wrap .color-item.active {
+    outline: solid 2px #0076df;
+}
+
+.colors-wrap .loading-spinner {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #cccccc7f;
+    pointer-events: none;
+}

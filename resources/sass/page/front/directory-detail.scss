@@ -1,0 +1,30 @@
+.directory_listing_detail_area {
+  padding: 30px 30px;
+}
+.directory_category_area {
+  padding: 10px;
+  box-shadow: 0 0 3px #eee;
+  margin-bottom: 50px;
+}
+
+.directory_item_area {
+  box-shadow: 0 0 3px #3333;
+  padding: 20px 10px;
+  margin-bottom: 30px;
+}
+
+.border-color-featured {
+  border: 1px solid red;
+}
+
+.common-block {
+  padding: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 4px;
+
+  .line-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+  }
+}

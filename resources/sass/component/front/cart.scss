@@ -1,0 +1,17 @@
+.dropdown-toggle {
+  &::after {
+    display: none;
+  }
+}
+.cart_badge_btn {
+  padding: 1px 1px;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: center;
+}

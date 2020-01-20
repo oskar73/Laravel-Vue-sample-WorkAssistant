@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /ssoLogin
+Disallow: /ssoRegister
+Disallow: /slider
+Disallow: /admin
+Disallow: /user
+Disallow: /cart/login/
+Disallow: /blog/ajax/
+Host: bizinabox.com

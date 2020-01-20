@@ -1,0 +1,46 @@
+.blog_search_box {
+  max-width: 600px;
+  min-width: 400px;
+}
+
+input[type='button'],
+input[type='text'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+textarea,
+input[type='submit'] {
+  -webkit-appearance: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.blog_search_input,
+.blog_search_input:focus {
+  height: 24px;
+  background-color: transparent;
+  padding: 0 !important;
+  width: 100%;
+  box-shadow: none;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: #86bc42;
+    text-decoration: none;
+  }
+}
+
+.post_small_info {
+  font-size: 12px;
+  color: #82bc12;
+}

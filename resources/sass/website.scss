@@ -1,0 +1,458 @@
+@import 'both';
+
+// Fonts
+@import 'fonts';
+@import 'fontawesome';
+@import 'vue3-carousel/dist/carousel.css';
+@import '@vueform/multiselect/themes/default.css';
+
+:root {
+}
+
+html,
+body {
+  overflow: auto;
+  font-family: Roboto, serif;
+  font-size: 0.875rem;
+}
+
+body {
+  line-height: unset;
+}
+
+// Common css
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// set background property to parent element.
+.text-invert {
+  filter: invert(1) grayscale(1) contrast(9);
+  color: transparent;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.bz-section-container {
+  width: 100%;
+  z-index: 1;
+}
+
+header {
+  z-index: 2 !important;
+  position: relative;
+}
+.field-required {
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+
+.success-text {
+  .title {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .msg {
+    color: green;
+  }
+}
+
+// Section Css
+
+.bz-page {
+  width: 100%;
+  height: 1px;
+  color: unset;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  $spacing: 8px;
+  $spacingDegree: 10;
+
+  // margin and padding
+  @mixin spacing($properties) {
+    @for $i from 0 through $spacingDegree {
+      &#{$i} {
+        @each $property in $properties {
+          #{$property}: 8px * $i !important;
+        }
+      }
+    }
+    &auto {
+      @each $property in $properties {
+        #{$property}: auto;
+      }
+    }
+  }
+
+  // width and height
+  @mixin dimension($properties) {
+    @for $i from 0 through 20 {
+      &#{$i * 5} {
+        @each $property in $properties {
+          #{$property}: 5% * $i !important;
+        }
+      }
+    }
+  }
+
+  .bz-section-container {
+    font-family: Roboto, serif;
+    width: 100%;
+
+    // flex aligns
+    .bz-align-self- {
+      &end {
+        align-self: flex-end;
+      }
+    }
+
+    // columns
+
+    .bz-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .bz-col,
+    .bz-col-1,
+    .bz-col-2,
+    .bz-col-3,
+    .bz-col-4,
+    .bz-col-5,
+    .bz-col-6,
+    .bz-col-7,
+    .bz-col-8,
+    .bz-col-9,
+    .bz-col-10,
+    .bz-col-11,
+    .bz-col-12,
+    .bz-col-auto,
+    .bz-col-lg,
+    .bz-col-lg-1,
+    .bz-col-lg-2,
+    .bz-col-lg-3,
+    .bz-col-lg-4,
+    .bz-col-lg-5,
+    .bz-col-lg-6,
+    .bz-col-lg-7,
+    .bz-col-lg-8,
+    .bz-col-lg-9,
+    .bz-col-lg-10,
+    .bz-col-lg-11,
+    .bz-col-lg-12,
+    .bz-col-lg-auto,
+    .bz-col-md,
+    .bz-col-md-1,
+    .bz-col-md-2,
+    .bz-col-md-3,
+    .bz-col-md-4,
+    .bz-col-md-5,
+    .bz-col-md-6,
+    .bz-col-md-7,
+    .bz-col-md-8,
+    .bz-col-md-9,
+    .bz-col-md-10,
+    .bz-col-md-11,
+    .bz-col-md-12,
+    .bz-col-md-auto,
+    .bz-col-xs,
+    .bz-col-xs-1,
+    .bz-col-xs-2,
+    .bz-col-xs-3,
+    .bz-col-xs-4,
+    .bz-col-xs-5,
+    .bz-col-xs-6,
+    .bz-col-xs-7,
+    .bz-col-xs-8,
+    .bz-col-xs-9,
+    .bz-col-xs-10,
+    .bz-col-xs-11,
+    .bz-col-xs-12,
+    .bz-col-xs-auto,
+    .bz-col-xl,
+    .bz-col-xl-1,
+    .bz-col-xl-2,
+    .bz-col-xl-3,
+    .bz-col-xl-4,
+    .bz-col-xl-5,
+    .bz-col-xl-6,
+    .bz-col-xl-7,
+    .bz-col-xl-8,
+    .bz-col-xl-9,
+    .bz-col-xl-10,
+    .bz-col-xl-11,
+    .bz-col-xl-12,
+    .bz-col-xl-auto {
+      width: 100%;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    @mixin columns {
+      &3 {
+        width: 25%;
+      }
+      &4 {
+        width: 33.333% !important;
+      }
+      &5 {
+        width: 41.66%;
+      }
+      &6 {
+        width: 50%;
+      }
+      &7 {
+        width: 58.33%;
+      }
+      &8 {
+        width: 66.666%;
+      }
+    }
+
+    .bz-col- {
+      @include columns;
+    }
+
+    &.bz-xs {
+      .bz-col-xs- {
+        @include columns;
+      }
+    }
+
+    &.bz-sm {
+      .bz-col-xs- {
+        @include columns;
+      }
+    }
+
+    &.bz-md {
+      .bz-col-md- {
+        @include columns;
+      }
+    }
+
+    &.bz-lg {
+      .bz-col-lg- {
+        @include columns;
+      }
+    }
+
+    &.bz-xs {
+      // grid columns
+      .col-lg-12,
+      .col-lg-11,
+      .col-lg-10,
+      .col-lg-9,
+      .col-lg-8,
+      .col-lg-7,
+      .col-lg-6,
+      .col-lg-5,
+      .col-lg-4,
+      .col-lg-3,
+      .col-lg-2,
+      .col-lg-1 {
+        max-width: 100%;
+        width: 100%;
+        flex: unset;
+      }
+
+      .flex-column-reverse {
+        flex-direction: column-reverse !important;
+      }
+    }
+    /*********************************************** columns ************************************************/
+
+    //display
+    .bz-d- {
+      &flex {
+        display: flex !important;
+      }
+      &table {
+        display: table !important;
+      }
+      &block {
+        display: block !important;
+      }
+      &none {
+        display: none !important;
+      }
+    }
+
+    .bz-flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bz-column-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bz-justify-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .bz-align-center {
+      display: flex;
+      align-items: center;
+    }
+
+    .bz-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bz-row-reverse {
+      flex-direction: row-reverse !important;
+    }
+
+    &.bz-lg {
+      .bz-d-lg-flex {
+        display: flex;
+      }
+    }
+
+    // margin
+
+    .bz-m- {
+      @include spacing(margin);
+    }
+
+    .bz-mt- {
+      @include spacing(margin-top);
+    }
+
+    &.bz-lg {
+      .bz-m-lg- {
+        @include spacing(margin);
+      }
+    }
+
+    //padding
+    .bz-p- {
+      @include spacing(padding);
+    }
+
+    .bz-py- {
+      $properties: padding-top, padding-bottom;
+      @include spacing($properties);
+    }
+
+    &.bz-lg {
+      .bz-p-lg- {
+        @include spacing(padding);
+      }
+      .bz-pr-lg- {
+        @include spacing(padding-right);
+      }
+    }
+
+    //overflow
+    .bz-overflow- {
+      &hidden {
+        overflow: hidden;
+      }
+    }
+
+    // width
+    .bz-w-lg- {
+      &5,
+      &10,
+      &15,
+      &20,
+      &25,
+      &30,
+      &35,
+      &40,
+      &45,
+      &50,
+      &55,
+      &60,
+      &65,
+      &70,
+      &75,
+      &80,
+      &85,
+      &90,
+      &100 {
+        width: 100%;
+      }
+    }
+    .bz-w- {
+      @include dimension(width);
+    }
+    &.bz-lg {
+      .bz-w-lg- {
+        @include dimension(width);
+      }
+    }
+
+    // height
+    .bz-h-lg- {
+      &5,
+      &10,
+      &15,
+      &20,
+      &25,
+      &30,
+      &35,
+      &40,
+      &45,
+      &50,
+      &55,
+      &60,
+      &65,
+      &70,
+      &75,
+      &80,
+      &85,
+      &90,
+      &100 {
+        height: 100%;
+      }
+    }
+    .bz-h- {
+      @include dimension(height);
+    }
+    &.bz-lg {
+      .bz-h-lg- {
+        @include dimension(height);
+      }
+    }
+  }
+}
+
+.bz-title-root,
+.bz-subtitle-root,
+.bz-text-root {
+  a {
+    font-family: var(--bz-theme-link-main-font-family, inherit);
+    font-weight: var(--bz-theme-link-main-font-weight, normal);
+    font-style: var(--bz-theme-link-main-font-style, normal);
+    text-decoration: var(--bz-theme-link-main-text-decoration);
+    letter-spacing: var(--bz-theme-link-main-letter-spacing, normal);
+    font-size: var(--bz-theme-link-main-font-size, inherit);
+    color: var(--bz-theme-link-main-font-color) !important;
+    opacity: var(--bz-theme-link-main-font-opacity, 1);
+
+    &:hover {
+      text-decoration: var(--bz-theme-link-main-hover-text-decoration, inherit) !important;
+      color: var(--bz-theme-link-main-hover-color) !important;
+    }
+  }
+}
+
+.dp__action_select {
+  background-color: var(--dp-primary-color);
+}

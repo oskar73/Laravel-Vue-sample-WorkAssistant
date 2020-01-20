@@ -1,0 +1,58 @@
+footer {
+  $colorBackground: #86bc42;
+  $colorBackgroundHover: #6e9d33;
+
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #ccc;
+  ul {
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 20px;
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: #767676;
+        font-weight: 300;
+        font-size: 12px;
+        font-family: 'Roboto';
+
+        &:hover {
+          color: $colorBackground;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .newsletter_form {
+    max-width: 350px;
+    input {
+      border-radius: 0;
+      color: $colorBackground;
+      &:focus {
+        border: 1px solid $colorBackground;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .input-group {
+      position: relative;
+      .subscribe_btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        background-color: $colorBackground;
+        color: #fff;
+        z-index: 99;
+        border-radius: 0;
+        &:hover {
+          background-color: $colorBackgroundHover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+name: Bizinabox CI
+on:
+  push:
+    branches:
+      - 'test'
+  pull_request:
+    types: [opened, reopened]
+    branches:
+      - Development
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node modules
+        run: yarn install
+      - name: Lint Check
+        run: yarn lint
+      - name: Prettier Check
+        run: yarn prettier
+      - name: Build Webpack
+        run: yarn prod

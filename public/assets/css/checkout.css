@@ -1,0 +1,677 @@
+.stripe_area .globalContent {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.stripe_area .common-SuperTitle {
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 60px;
+    color: #32325d;
+    letter-spacing: -0.01em;
+}
+
+@media (min-width: 670px) {
+    .stripe_area .common-SuperTitle {
+    font-size: 50px;
+    line-height: 70px;
+    }
+}
+
+.stripe_area .common-IntroText {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 31px;
+    color: #525f7f;
+}
+
+@media (min-width: 670px) {
+    .stripe_area .common-IntroText {
+    font-size: 24px;
+    line-height: 36px;
+    }
+}
+
+.stripe_area .common-BodyText {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: #6b7c93;
+}
+
+.stripe_area .common-Link {
+    color: #6772e5;
+    font-weight: 500;
+    transition: color 0.1s ease;
+    cursor: pointer;
+}
+
+.stripe_area .common-Link:hover {
+    color: #32325d;
+}
+
+.stripe_area .common-Link:active {
+    color: #000;
+}
+
+.stripe_area .common-Link--arrow:after {
+    font: normal 16px StripeIcons;
+    content: '\2192';
+    padding-left: 5px;
+}
+
+.stripe_area .common-Button {
+    white-space: nowrap;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #6772e5;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.stripe_area .common-Button:hover {
+    color: #7795f8;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.stripe_area .common-Button:active {
+    color: #555abf;
+    background-color: #f6f9fc;
+    transform: translateY(1px);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.stripe_area .common-Button--default {
+    color: #fff;
+    background: #6772e5;
+}
+
+.stripe_area .common-Button--default:hover {
+    color: #fff;
+    background-color: #7795f8;
+}
+
+.stripe_area .common-Button--default:active {
+    color: #e6ebf1;
+    background-color: #555abf;
+}
+
+.stripe_area .common-Button--dark {
+    color: #fff;
+    background: #32325d;
+}
+
+.stripe_area .common-Button--dark:hover {
+    color: #fff;
+    background-color: #43458b;
+}
+
+.stripe_area .common-Button--dark:active {
+    color: #e6ebf1;
+    background-color: #32325d;
+}
+
+.stripe_area .common-Button--disabled {
+    color: #fff;
+    background: #aab7c4;
+    pointer-events: none;
+}
+
+.stripe_area .common-ButtonIcon {
+    display: inline;
+    margin: 0 5px 0 0;
+    position: relative;
+}
+
+.stripe_area .common-ButtonGroup {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.stripe_area .common-ButtonGroup .common-Button {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin: 10px;
+}
+
+/** Page-specific styles */
+@keyframes spin {
+    0% {
+    transform: rotate(0deg);
+    }
+
+    to {
+    transform: rotate(1turn);
+    }
+}
+
+@keyframes void-animation-out {
+    0%,
+    to {
+    opacity: 1;
+    }
+}
+
+.stripe_area main {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.stripe_area .stripes {
+    position: absolute;
+    width: 100%;
+    transform: skewY(-12deg);
+    height: 950px;
+    top: -350px;
+    background: linear-gradient(180deg, #e6ebf1 350px, rgba(230, 235, 241, 0));
+}
+
+.stripe_area .stripes .stripe {
+    position: absolute;
+    height: 190px;
+}
+
+.stripe_area .stripes .s1 {
+    height: 380px;
+    top: 0;
+    left: 0;
+    width: 24%;
+    background: linear-gradient(90deg, #e6ebf1, rgba(230, 235, 241, 0));
+}
+
+.stripe_area .stripes .s2 {
+    top: 380px;
+    left: 4%;
+    width: 35%;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.65), hsla(0, 0%, 100%, 0));
+}
+
+.stripe_area .stripes .s3 {
+    top: 380px;
+    right: 0;
+    width: 38%;
+    background: linear-gradient(90deg, #e4e9f0, rgba(228, 233, 240, 0));
+}
+
+.stripe_area main .cell {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex: auto;
+    flex: auto;
+    min-width: 100%;
+    min-height: 400px;
+}
+
+.stripe_area main .cell + .cell {
+    margin-top: 70px;
+}
+
+.stripe_area main .cell.intro {
+    padding: 0;
+}
+
+@media (min-width: 670px) {
+    .stripe_area .cell.intro {
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    .stripe_area .optionList {
+    margin-left: 13px;
+    }
+}
+
+.stripe_area .cell.intro > * {
+    width: 100%;
+    max-width: 700px;
+}
+
+.stripe_area .cell.intro .common-IntroText {
+    margin-top: 10px;
+}
+
+.stripe_area .cell.intro .common-BodyText {
+    margin-top: 15px;
+}
+
+.stripe_area cell.intro .common-ButtonGroup {
+    width: auto;
+    margin-top: 20px;
+}
+
+.stripe_area .example.submitted form,
+.stripe_area .example.submitting form {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+.stripe_area .example.submitted .success,
+.stripe_area .example.submitting .success {
+    pointer-events: all;
+}
+
+.stripe_area .example.submitting .success .icon {
+    opacity: 1;
+}
+
+.stripe_area .example.submitted .success > * {
+    opacity: 1;
+    transform: none !important;
+}
+
+.stripe_area .example.submitted .success > :nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.stripe_area .example.submitted .success > :nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.stripe_area .example.submitted .success > :nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.stripe_area .example.submitted .success .icon .border,
+.stripe_area .example.submitted .success .icon .checkmark {
+    opacity: 1;
+    stroke-dashoffset: 0 !important;
+}
+
+.stripe_area .example * {
+    margin: 0;
+    padding: 0;
+}
+
+.stripe_area .example .caption {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 15px 10px 0;
+    color: #aab7c4;
+    font-family: Roboto, 'Open Sans', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.stripe_area .example .caption * {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.stripe_area .example .caption .no-charge {
+    color: #cfd7df;
+    margin-right: 10px;
+}
+
+.stripe_area .example .caption a.source {
+    text-align: right;
+    color: inherit;
+    transition: color 0.1s ease-in-out;
+    margin-left: 10px;
+}
+
+.stripe_area .example .caption a.source:hover {
+    color: #6772e5;
+}
+
+.stripe_area .example .caption a.source:active {
+    color: #43458b;
+}
+
+.stripe_area .example .caption a.source svg {
+    margin-right: 10px;
+}
+
+.stripe_area .example .caption a.source svg path {
+    fill: currentColor;
+}
+
+.stripe_area .example form {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    transition-property: opacity, transform;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe_area .example form input::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+.stripe_area .example form input::-moz-placeholder {
+    opacity: 1;
+}
+
+.stripe_area .example form input:-ms-input-placeholder {
+    opacity: 1;
+}
+
+.stripe_area .example .error {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    margin-top: 20px;
+    left: 0;
+    padding: 0 15px;
+    font-size: 13px !important;
+    opacity: 0;
+    transform: translateY(10px);
+    transition-property: opacity, transform;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe_area .example .error.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.stripe_area .example .error .message {
+    font-size: inherit;
+}
+
+.stripe_area .example .error svg {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-top: -1px;
+    margin-right: 10px;
+}
+
+.stripe_area .example .success {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+@media (min-width: 670px) {
+    .stripe_area .example .success {
+        padding: 40px;
+    }
+}
+
+.stripe_area .example .success > * {
+    transition-property: opacity, transform;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.stripe_area .example .success .icon {
+    margin: 15px 0 30px;
+    transform: translateY(70px) scale(0.75);
+}
+
+.stripe_area .example .success .icon svg {
+    will-change: transform;
+}
+
+.stripe_area .example .success .icon .border {
+    stroke-dasharray: 251;
+    stroke-dashoffset: 62.75;
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: spin 1s linear infinite;
+}
+
+.stripe_area .example .success .icon .checkmark {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    transition: stroke-dashoffset 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
+}
+
+.stripe_area .example .success .title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.stripe_area .example .success .message {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.6em;
+}
+
+.stripe_area .example .success .message span {
+    font-size: inherit;
+}
+
+.stripe_area .example .success .reset:active {
+    transition-duration: 0.15s;
+    transition-delay: 0s;
+    opacity: 0.65;
+}
+
+.stripe_area .example .success .reset svg {
+    will-change: transform;
+}
+
+.stripe_area footer {
+    position: relative;
+    max-width: 750px;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.stripe_area .optionList {
+    margin: 6px 0;
+}
+
+.stripe_area .optionList li {
+    display: inline-block;
+    margin-right: 13px;
+}
+
+.stripe_area .optionList a {
+    color: #aab7c4;
+    transition: color 0.1s ease-in-out;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.stripe_area .optionList a.selected {
+    color: #6772e5;
+    font-weight: 600;
+}
+
+.stripe_area .optionList a:hover {
+    color: #32325d;
+}
+
+.stripe_area .optionList a.selected:hover {
+    cursor: default;
+    color: #6772e5;
+}
+.stripe_area .example.example4 {
+    background-color: #f6f9fc;
+}
+
+.stripe_area .example.example4 * {
+    font-family: Inter UI, Open Sans, Segoe UI, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.stripe_area .example.example4 form {
+    max-width: 496px !important;
+    padding: 0 15px;
+}
+
+.stripe_area .example.example4 form > * + * {
+    margin-top: 20px;
+}
+
+.stripe_area .example.example4 .container {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.stripe_area .example.example4 fieldset {
+    border-style: none;
+    padding: 5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    background: rgba(18, 91, 152, 0.05);
+    border-radius: 8px;
+}
+
+.stripe_area .example.example4 fieldset legend {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #8898aa;
+    padding: 3px 10px 7px;
+}
+
+.stripe_area .example.example4 .card-only {
+    display: block;
+}
+.stripe_area .example.example4 .payment-request-available {
+    display: none;
+}
+
+.stripe_area .example.example4 fieldset legend + * {
+    clear: both;
+}
+
+.stripe_area .example.example4 input,
+.stripe_area .example.example4 button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-style: none;
+    color: #fff;
+}
+
+.stripe_area .example.example4 input:-webkit-autofill {
+    transition: background-color 100000000s;
+    -webkit-animation: 1ms void-animation-out;
+}
+
+.stripe_area .example.example4 #example4-card {
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.stripe_area .example.example4 input {
+    -webkit-animation: 1ms void-animation-out;
+}
+
+.stripe_area .example.example4 input::-webkit-input-placeholder {
+    color: #9bacc8;
+}
+
+.stripe_area .example.example4 input::-moz-placeholder {
+    color: #9bacc8;
+}
+
+.stripe_area .example.example4 input:-ms-input-placeholder {
+    color: #9bacc8;
+}
+
+.stripe_area .example.example4 button {
+    display: block;
+    width: 100%;
+    height: 37px;
+    background-color: #82bc12;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.stripe_area .example.example4 button:active {
+    background-color: #b76ac4;
+}
+
+.stripe_area .example.example4 .error svg .base {
+    fill: #e25950;
+}
+
+.stripe_area .example.example4 .error svg .glyph {
+    fill: #f6f9fc;
+}
+
+.stripe_area .example.example4 .error .message {
+    color: #e25950;
+}
+
+.stripe_area .example.example4 .success .icon .border {
+    stroke: #86bc42;
+}
+
+.stripe_area .example.example4 .success .icon .checkmark {
+    stroke: #82bc12;
+}
+
+.stripe_area .example.example4 .success .title {
+    color: #32325d;
+}
+
+.stripe_area .example.example4 .success .message {
+    color: #8898aa;
+}
+
+.stripe_area .example.example4 .success .reset path {
+    fill: #82bc12;
+}
+.stripe_area .stripe_custom_input {
+    padding-left: 5px !important;
+    color: #32325d !important;
+    font-weight: 500 !important;
+    font-family: Inter UI, Open Sans, Segoe UI, sans-serif !important;
+    font-size: 16px !important;
+}
+.stripe_area .custom_left_stripe_el {
+    border-right: 1px solid #dee2e6;
+}
+  

@@ -1,0 +1,34 @@
+.bz-front-component--home-slider {
+  //.tp-bannertimer {
+  //  display: none !important;
+  //}
+
+  .text-title {
+    font-size: 24px;
+    color: #282b2d;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-description {
+    color: rgb(94, 105, 115);
+    white-space: normal !important;
+  }
+
+  .butn {
+    text-transform: none !important;
+    position: relative;
+    z-index: 999;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 0 1.75rem;
+    text-decoration: none;
+
+    &.theme {
+      background: #86bc42;
+      color: #fff;
+    }
+  }
+}

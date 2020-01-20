@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%;
+  background-color: #efefef;
+}
+.header {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 0 10px 2px #0000003f;
+  position: relative;
+  z-index: 100;
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.video-container {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: row;
+
+  .video-category {
+    width: 300px;
+    background-color: white;
+    height: 100%;
+    box-shadow: 0 0 10px 2px #00000012;
+    padding-top: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .category-name,
+  .subcategory-name,
+  .video-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
+
+    span {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: #00000034;
+    }
+  }
+
+  .category-name,
+  .subcategory-name {
+    border-bottom: solid 1px #00000012;
+  }
+
+  .category-name.all {
+    border-top: solid 1px #00000012;
+  }
+  .category-name.selected {
+    background-color: #0a6aa1;
+    color: white;
+  }
+  .subcategory-name,
+  .video-title {
+    padding-left: 30px !important;
+  }
+
+  .video-title {
+    background-color: #efefef;
+  }
+
+  .video-area {
+    width: calc(100% - 300px);
+    padding: 20px;
+    .video-card {
+      position: relative;
+      width: 100%;
+      padding-top: 80%;
+
+      .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 2px #00000012;
+        overflow: hidden !important;
+        cursor: pointer;
+
+        .image {
+          width: 100%;
+          height: 75%;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.text-ellipsis {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 9px;
+}

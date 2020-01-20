@@ -1,0 +1,152 @@
+.home-boxes {
+  &-top,
+  &-middle,
+  &-bottom {
+    .home-box-item-container {
+      background: #fff;
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+      overflow: visible;
+      position: relative;
+      margin-bottom: 20px;
+      transition: all 0.5s;
+      margin-top: 5px;
+
+      .preview-wrapper {
+        --aspect-ratio: 1;
+        display: block;
+        position: relative;
+        padding-top: calc(100% / var(--aspect-ratio));
+
+        .thumbnail_overlay {
+          width: 100%;
+          height: 100%;
+
+          &:hover {
+            background-color: #a2dbff42;
+
+            & > .description {
+              opacity: 1;
+            }
+          }
+
+          .img_area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+
+            img {
+              margin: auto;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .description {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(255, 255, 255, 0.5);
+          transition: opacity 700ms ease-in-out;
+          overflow: hidden;
+          cursor: pointer;
+          color: black;
+        }
+
+        .text-name {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          overflow: hidden;
+          cursor: pointer;
+          background-color: white;
+          width: 100%;
+          text-align: center;
+          color: black;
+        }
+
+        .center-title {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          top: 0;
+          right: 0;
+          overflow: hidden;
+          cursor: pointer;
+          width: 100%;
+          text-align: center;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          strong {
+            font-size: 4rem;
+            color: white;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: initial;
+            line-height: 4rem;
+          }
+
+          span {
+            font-size: 2rem;
+            color: white;
+            font-weight: 900;
+            font-family: initial;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-top {
+    @media screen and (min-width: 1200px) {
+      &-6,
+      &-7 {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      &-7 {
+        display: none;
+      }
+    }
+  }
+
+  &-middle {
+    @media screen and (max-width: 992px) {
+      &-left-0,
+      &-left-1 {
+        display: none;
+      }
+      &-right-2,
+      &-right-3 {
+        display: none;
+      }
+    }
+  }
+
+  &-bottom {
+    @media screen and (min-width: 1200px) {
+      &-0,
+      &-1 {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      &-0 {
+        display: none;
+      }
+    }
+  }
+}

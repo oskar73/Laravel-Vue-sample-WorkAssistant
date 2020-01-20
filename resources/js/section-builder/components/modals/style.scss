@@ -1,0 +1,17 @@
+.vm--container {
+  left: 0;
+  top: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10002 !important;
+}
+.vm--modal {
+  height: unset !important;
+  width: 90% !important;
+  left: unset !important;
+  top: unset !important;
+  max-height: 90vh;
+  max-width: 700px;
+  overflow: auto;
+}

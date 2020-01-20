@@ -1,0 +1,7 @@
+node_modules
+public
+*.test.js
+
+resources/js/section-builder/custom
+resources/js/section-builder/components/vue-splide.js
+resources/js/svg-editor/editor

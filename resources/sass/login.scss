@@ -1,0 +1,193 @@
+//authentication area
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.auth_area {
+  background: #edf2f7;
+  .authApp {
+    border-top: 5px solid #82bc12;
+    width: 100vw;
+    height: 100vh;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+
+    .main_area {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    .form {
+      background: #fff;
+      padding: 40px;
+      color: #333;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+
+      .field-wrap {
+        position: relative;
+        margin-bottom: 15px;
+
+        .psw_eye {
+          position: absolute;
+          right: 10px;
+          bottom: 12px;
+          cursor: pointer;
+        }
+      }
+
+      .biz_input {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px;
+        background: none;
+        border: 1px solid #a0b3b0;
+        color: #333;
+        border-radius: 5px;
+        -webkit-transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+        &:focus {
+          outline: 0;
+          border-color: #71c55d;
+        }
+      }
+
+      .rem_me {
+        padding-left: 0px;
+        margin-left: 0px;
+        position: relative;
+      }
+
+      .check_area {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+        text-align: left;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #333;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          position: absolute;
+          top: 2px;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          border: 1px solid #86bc42;
+          background-color: #fff;
+          &:after {
+            left: 6px;
+            top: 1px;
+            width: 8px;
+            height: 15px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            content: '';
+            position: absolute;
+            display: none;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+        input:checked ~ .checkmark {
+          background-color: #86bc42;
+        }
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+
+      .button-block {
+        display: block;
+        width: 100%;
+      }
+
+      .auth_button {
+        border: 0;
+        outline: none;
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        background: #86bc42;
+        color: #ffffff;
+        box-shadow: 1px 3px 5px #3333;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-appearance: none;
+      }
+    }
+
+    .auth-social-links {
+      text-align: center;
+      a {
+        font-size: 17px;
+        display: inline-block;
+        color: #fff;
+        line-height: 2;
+        padding: 6px 0 8px 0;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+        margin: 5px;
+        .fa {
+          font-size: 25px;
+        }
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .link_to {
+      color: #333;
+    }
+  }
+}
+// general css
+
+.underline {
+  text-decoration: underline;
+}
+
+.bg-tw {
+  background-color: #1da1f2;
+}
+.bg-fb {
+  background-color: #4267b2;
+}
+.bg-go {
+  background-color: #db4437;
+}
+.bg-ins {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.bg-ln {
+  background-color: #2867b2;
+}
+.bg-git {
+  background-color: #24292e;
+}

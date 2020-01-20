@@ -1,0 +1,42 @@
+id: 47492
+name: bizinabox
+separate-vendor: true
+asset-domain: assets.bizinabox.com
+assets:
+  source: public
+  exclude:
+    - .htaccess
+    - mix-manifest.json
+    - index.php
+    - robots.txt
+environments:
+  production:
+    warm: 10
+    memory: 2048
+    timeout: 28 # API Gateway max timeout 30 seconds
+    cli-memory: 512
+    cli-timeout: 600
+    runtime: docker
+    storage: storage.bizinabox.com
+    # balancer: bizinabox-balancer
+    # network: net-bizinabox
+
+    firewall:
+      rate-limit: 1000
+    queue-concurrency: 100
+    concurrency: 200
+    queues:
+      - high
+      - default
+    build:
+      - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
+      - 'php artisan event:cache'
+      - 'npm install --save --legacy-peer-deps && npm run build && npm run build:website'
+    deploy:
+      - 'php artisan --version'
+      - 'php artisan migrate --force'
+      - 'php artisan refresh:sections'
+      - 'php artisan config:cache'
+    domain:
+      - bizinabox.com
+      - '*.bizinabox.com'

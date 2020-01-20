@@ -1,0 +1,192 @@
+//login css
+
+//authentication area
+.auth_area {
+  background: #edf2f7;
+  .authApp {
+    border-top: 5px solid #82bc12;
+    width: 100vw;
+    height: 100vh;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    background: url('$image/login.jpg') no-repeat center;
+    background-size: cover;
+    .main_area {
+      max-width: 500px;
+      margin: 20px auto 100px auto;
+    }
+    .form {
+      background: #fff;
+      padding: 40px;
+      color: #333;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+
+      .field-wrap {
+        position: relative;
+        margin-bottom: 15px;
+
+        .psw_eye {
+          position: absolute;
+          right: 10px;
+          bottom: 12px;
+          cursor: pointer;
+        }
+      }
+      .biz_label {
+        position: absolute;
+        left: 10px;
+        font-size: 12px;
+        color: #637381;
+      }
+      .biz_input {
+        font-size: 20px;
+        display: block;
+        width: 100%;
+        background: none;
+        border: 1px solid #a0b3b0;
+        color: #333;
+        height: 56px;
+
+        padding: 25px 10px 10px 10px;
+        border-radius: 3px;
+        //border-radius: 5px;
+        -webkit-transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+        &:focus {
+          outline: 0;
+          border: 2px solid #71c55d;
+        }
+      }
+
+      .rem_me {
+        padding-left: 0px;
+        margin-left: 0px;
+        position: relative;
+      }
+
+      .check_area {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+        text-align: left;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #333;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          position: absolute;
+          top: 2px;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          border: 1px solid #86bc42;
+          background-color: #fff;
+          &:after {
+            left: 6px;
+            top: 1px;
+            width: 8px;
+            height: 15px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            content: '';
+            position: absolute;
+            display: none;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+        input:checked ~ .checkmark {
+          background-color: #86bc42;
+        }
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+
+      .button-block {
+        display: block;
+        width: 100%;
+      }
+
+      .auth_button {
+        border: 0;
+        outline: none;
+        display: block;
+        width: 100%;
+        //border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        background: #86bc42;
+        color: #ffffff;
+        box-shadow: 1px 3px 5px #3333;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-appearance: none;
+      }
+      .signupBtn {
+        border: 0;
+        margin-top: 15px;
+        outline: none;
+        border-radius: 3px;
+        padding: 15px 30px;
+        font-size: 20px;
+        background: #86bc42;
+        color: #ffffff;
+        box-shadow: 1px 3px 5px #3333;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-appearance: none;
+      }
+    }
+
+    .auth-social-links {
+      text-align: center;
+      a {
+        font-size: 17px;
+        display: inline-block;
+        color: #fff;
+        line-height: 2;
+        padding: 6px 0 8px 0;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+        margin: 5px;
+        .fa {
+          font-size: 25px;
+        }
+        &:hover {
+          color: #fff;
+          box-shadow: 0 5px 12px #333;
+        }
+        &:focus {
+          box-shadow: 0 5px 12px #3333;
+        }
+      }
+    }
+
+    .link_to {
+      color: #333;
+    }
+  }
+}
+
+//end login css

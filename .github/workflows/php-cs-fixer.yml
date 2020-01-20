@@ -1,0 +1,46 @@
+name: Fix Styling
+
+on:
+  pull_request_target:
+    branches:
+      - 'test'
+    paths:
+      - "app/**"
+  push:
+    branches:
+      - 'test'
+    paths:
+      - "app/**"
+
+jobs:
+  php-cs-fixer:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0.7
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+          coverage: none
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-interaction
+
+      - name: Run PHP CS Fixer
+        run: |
+          php -d memory_limit=-1
+          composer format
+      - name: Reset Composer files
+        run: |
+          git checkout composer.json
+          git checkout composer.lock
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Fix styling with php-cs-fixer
