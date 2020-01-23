@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <div class="w-100" x-data="categoryData">
+    <div class="w-100" x-data="categoryData"> 
         <div class="section_control_panel_area">
             <x-form.form action="{{route('admin.template.section.item.update', $section->id)}}">
                 <div class="row">
