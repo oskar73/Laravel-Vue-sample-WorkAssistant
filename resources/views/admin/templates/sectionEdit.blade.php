@@ -73,5 +73,5 @@
         window.sections = {!! $section->category->sections !!};
     </script>
     <script src="{{asset('assets/js/admin/template/sectionEdit.js')}}"></script>
-@endsection
+@endsection 
                                                                            
