@@ -68,7 +68,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"></script>
     <script src="{{s3_asset('vendors/colorpicker/vanilla-color-picker.min.js')}}"></script>
     <script>
-        window.sectionData = {!! json_encode($section->data) !!};
+        window.sectionData = {!! json_encode($section->dat a) !!};
         window.categories = {!! $categories !!};
         window.sections = {!! $section->category->sections !!};
     </script>
